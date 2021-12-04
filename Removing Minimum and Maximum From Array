@@ -1,3 +1,5 @@
+https://leetcode.com/problems/removing-minimum-and-maximum-from-array/
+
 int minimumDeletions(vector<int>& nums) {
         int maxidx=max_element(begin(nums),end(nums))-begin(nums);
         int minidx=min_element(begin(nums),end(nums))-begin(nums);
@@ -6,6 +8,7 @@ int minimumDeletions(vector<int>& nums) {
         return min({minidx+1,n-maxidx,maxidx+1+n-minidx});
     }
 
+/*
 Return the minimum number of deletions it would take to remove both the minimum and maximum element from the array.
 Example 1:
 Input: nums = [2,10,7,5,4,1,8,6]
