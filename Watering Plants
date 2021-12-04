@@ -1,0 +1,16 @@
+https://leetcode.com/problems/watering-plants/
+
+int wateringPlants(vector<int>& plants, int capacity) {
+        int steps=0,waterleft=capacity;
+        for(int i=0;i<plants.size();i++){
+            if(waterleft>=plants[i]){
+                steps++;
+                waterleft-=plants[i];
+            }
+            else{
+                steps+=2*i+1;
+                waterleft=capacity-plants[i];
+            }
+        }
+        return steps;
+    }
